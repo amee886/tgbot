@@ -57,14 +57,9 @@ def notify(seconds, message_id, total, chat_id):
     bot.update_message(chat_id, message_id, text)
 
 
-def main():
-    echo()
-    render_progressbar()
-    reply()
-    notify()
-    bot = ptbot.Bot(TG_TOKEN)
-    bot.reply_on_message(reply)
-    bot.run_bot()
+bot = ptbot.Bot(TG_TOKEN)
+bot.reply_on_message(reply)
+bot.run_bot()
 
 
 if __name__ == "__main__":
